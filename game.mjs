@@ -14,7 +14,7 @@ let brett = [
 ];*/
 
 import ANSI from "./ANSI.mjs"
-import { spillebrett } from './spilleskjerm.mjs';
+import { lageSpillbrett } from './spilleskjerm.mjs';
 
 
 let brett = [
@@ -43,7 +43,8 @@ let isGameOver = false
 while (isGameOver == false) {
 
     console.log(ANSI.CLEAR_SCREEN, ANSI.CURSOR_HOME);
-    visBrett(brett)
+    //visBrett(brett)
+    console.log(lageSpillbrett(brett));
     console.log(`Det er spiller ${spillerNavn()} sin tur`)
 
     let rad = -1;
@@ -58,7 +59,7 @@ while (isGameOver == false) {
 
     brett[rad][kolone] = spiller;
 
-    vinner = harNoenVunnet(brett);
+    let vinner = harNoenVunnet(brett);
     if (vinner != 0) {
         isGameOver = true;
         resultatAvSpill = `Vinneren er ${spillerNavn(vinner)}`;
@@ -71,7 +72,8 @@ while (isGameOver == false) {
 }
 
 console.log(ANSI.CLEAR_SCREEN, ANSI.CURSOR_HOME);
-visBrett(brett);
+//visBrett(brett);
+console.log(lageSpillbrett(brett));
 console.log(resultatAvSpill);
 console.log("Game Over");
 process.exit();
