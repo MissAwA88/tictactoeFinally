@@ -26,6 +26,7 @@ let brett = [
 //spillebrett 
 //#region Logikken for spillet tre på rad. --------------------------------------------------------
 /*
+notes:
 let spillebrett = [
 ${spillebrett [0][0]}${spillebrett [0][1]}${spillebrett [0][2]}
 ${spillebrett [1][0]}${spillebrett [1][1]}${spillebrett [1][2]}
@@ -36,11 +37,36 @@ ${spillebrett [2][0]}${spillebrett [2][1]}${spillebrett [2][2]}
 const spiller1 = 1;
 const spiller2 = -1;
 
+/* Gi spiller1 og spiller2 
+nyttnavn, bruke await funksjon = velgSpillerNavn 
+
+*/
 let resultatAvSpill = "";
 let spiller = spiller1;
 let isGameOver = false
 
 while (isGameOver == false) {
+
+    /*
+    Notes
+ReplayGame();
+}
+
+
+async function ReplayGame(){
+    print(.replay);
+    let replay = await rl.question("");
+
+    if(replay == "n"){
+        //gameRun = false;
+        process.exit();
+    }else{
+        playGame();
+    }
+
+}
+
+    */
 
     console.log(ANSI.CLEAR_SCREEN, ANSI.CURSOR_HOME);
     //visBrett(brett)
